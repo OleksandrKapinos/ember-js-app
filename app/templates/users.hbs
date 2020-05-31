@@ -1,0 +1,8 @@
+<p>this will be my users</p>
+<div class="users-list">
+    <UsersTable>
+        {{#each @model as |user|}}
+            <UserTableItem @user={{user}} />
+        {{/each}}
+    </UsersTable>
+</div>

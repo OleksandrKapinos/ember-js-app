@@ -1,0 +1,8 @@
+<tr>
+    <th>{{@user.id}}</th>
+    <th>{{@user.name}}</th>
+    <th>{{@user.address.city}}</th>
+    <th>
+        <LinkTo @route="user-info" @model={{@user}}>posts</LinkTo>
+    </th>
+</tr>

@@ -1,0 +1,10 @@
+<p>
+    this will be my posts
+</p>
+<div class="posts">
+    <PostsTable>
+        {{#each @model as |post|}}
+            <PostTableItem @post={{post}} />
+        {{/each}}
+    </PostsTable>
+</div>
