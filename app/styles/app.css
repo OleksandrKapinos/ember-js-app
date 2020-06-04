@@ -65,17 +65,18 @@ body {
 .main-content {
     grid-area: main;
     min-height: 80vh;
+    padding: 0 20px 20px 0;
 }
-
-
-
+.button.active{
+    padding: 0 5px;
+    background-color: #f3f3f3;
+    color: #212121;
+}
 .center {
     display: flex;
     justify-content: center;
     align-items: center;
 }
-
-
 .title-box {
     display: flex;
     justify-content: center;
@@ -84,6 +85,14 @@ body {
 .title-button {
     text-decoration: none;
     color: #212121;
+}
+
+
+/*index styles*/
+.image-test {
+    margin: 0 auto;
+    width: 600px;
+    height: auto;
 }
 
 
@@ -163,20 +172,7 @@ body {
     font-weight: bold;
 }
 
-
-
-
-
-.button.active{
-    padding: 0 5px;
-    background-color: #f3f3f3;
-    color: #212121;
-}
-
-
-
-
-/*loader*/
+/*loader styles*/
 .loader,
 .loader:after {
     border-radius: 50%;
@@ -219,16 +215,37 @@ body {
     }
 }
 
-
+/*posts info styles*/
 .post {
-    border: 3px solid #e0e0e0;
+    border: 3px solid #212121;
     border-radius: 15px;
     margin-bottom: 10px;
 }
 .post-name {
     padding: 5px;
-    background-color: #e0e0e0;
+    color: #e0e0e0;
+    background-color: #212121;
 }
 .post-body {
+    padding: 5px;
+}
+
+
+/*comments styles*/
+.comments {
+    margin: 15px 0 0 0;
+}
+.comment {
+    border: 3px solid #e0e0e0;
+    border-radius: 15px;
+    margin-bottom: 10px;
+}
+.comment-header {
+    display: flex;
+    justify-content: space-between;
+    padding: 10px;
+    background-color: #e0e0e0;
+}
+.comment-body {
     padding: 5px;
 }

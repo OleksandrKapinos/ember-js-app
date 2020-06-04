@@ -1,18 +1,18 @@
 <div>
 
-   <div class="post">
-       <p class="post-name center">{{@post.title}}</p>
-       <p class="post-body">{{@post.body}}</p>
-   </div>
+    <div class="post">
+        <p class="post-name center">{{@post.post.title}}</p>
+        <p class="post-body">{{@post.post.body}}</p>
+    </div>
 
-    <p>
-        <LinkTo class="button" @route="posts">back to posts</LinkTo>
-    </p>
-    <p>
-        <LinkTo class="button" @route="post-info.comment" @post={{@post}}>Show comments</LinkTo>
-    </p>
-
-    {{outlet}}
+    <button class="button" {{on 'click' this.show}}>{{this.commentsText}} comments</button>
+    {{#if this.showComments}}
+        <div class="comments">
+            {{#each @post.comments as |comment|}}
+                <Post::Comment @comment={{comment}} />
+            {{/each}}
+        </div>
+    {{/if}}
 </div>
 
 

@@ -1,5 +1,7 @@
 <div class="comment">
-    <p>{{@comment.name}}</p>
-    <p>{{@comment.email}}</p>
-    <p>{{@comment.body}}</p>
+    <div class="comment-header">
+        <span class="comment-name">{{@comment.name}}</span>
+        <span class="comment-email">{{@comment.email}}</span>
+    </div>
+    <p class="comment-body">{{@comment.body}}</p>
 </div>
