@@ -1,9 +1,14 @@
-<div class="title">Title</div>
-<div class="nav-bar">
-    <LinkTo @route="index">Index</LinkTo>
-    <LinkTo @route="users">Users</LinkTo>
-    <LinkTo @route="posts">Posts</LinkTo>
+<div class="main-block">
+    <div class="title">
+        <h1><LinkTo class='title-button' @route="index">Title</LinkTo></h1>
+    </div>
+    <div class="nav-bar">
+        <LinkTo class='nav-link button' @route="index">Main</LinkTo>
+        <LinkTo class='nav-link button' @route="users">Users</LinkTo>
+        <LinkTo class='nav-link button' @route="posts">Posts</LinkTo>
+    </div>
+    <div class="main-content">
+        {{outlet}}
+    </div>
 </div>
-<div class="main-content">
-    {{outlet}}
-</div>
+

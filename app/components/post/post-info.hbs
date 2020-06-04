@@ -1,0 +1,18 @@
+<div>
+
+   <div class="post">
+       <p class="post-name center">{{@post.title}}</p>
+       <p class="post-body">{{@post.body}}</p>
+   </div>
+
+    <p>
+        <LinkTo class="button" @route="posts">back to posts</LinkTo>
+    </p>
+    <p>
+        <LinkTo class="button" @route="post-info.comment" @post={{@post}}>Show comments</LinkTo>
+    </p>
+
+    {{outlet}}
+</div>
+
+

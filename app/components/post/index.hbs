@@ -1,0 +1,16 @@
+<div class="post-box">
+
+    <div class="circle-id center">
+        {{@post.id}}
+    </div>
+
+    <div class="post-title">
+        {{@post.title}}
+    </div>
+
+    <div class="center">
+        <LinkTo class="button center" @route="post-info" @model={{@post}}>Read more</LinkTo>
+    </div>
+
+</div>
+

@@ -1,11 +1,14 @@
 import Route from '@ember/routing/route';
 
-export default class UserPostsRoute extends Route {
+export default class UserInfoRoute extends Route {
    async model(params) {
-       let responce = await fetch(`https://jsonplaceholder.typicode.com/users/${params.id}`);
-       let parsed = await responce.json();
-       console.log('entered params in user info', params);
-       console.log('entered parsed in user info', parsed);
-       return parsed;
+       try {
+           let responce = await fetch(`https://jsonplaceholder.typicode.com/users/${params.user_id}`);
+           let parsed = await responce.json();
+           return parsed;
+       }
+       catch (e) {
+           console.log('Error in User Info routes', e);
+       }
     }
 }

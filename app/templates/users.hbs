@@ -1,8 +1,9 @@
-<p>this will be my users</p>
-<div class="users-list">
-    <UsersTable>
+<LocalTitle>
+    List of authors post
+</LocalTitle>
+
+<div class="users">
         {{#each @model as |user|}}
-            <UserTableItem @user={{user}} />
+            <User @user={{user}} />
         {{/each}}
-    </UsersTable>
 </div>

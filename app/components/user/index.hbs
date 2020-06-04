@@ -1,0 +1,20 @@
+<div class="user-box">
+    <div class="center">
+        <div class="circle-id center">{{@user.id}}</div>
+    </div>
+
+
+       <User::UserImage/>
+
+
+    <div class="user-info">
+        <p>Name: {{@user.name}}</p>
+        <p>Email: {{@user.email}}</p>
+        <p>City: {{@user.address.city}}</p>
+        <p>Phone: {{@user.phone}}</p>
+    </div>
+    <div class="center">
+        <LinkTo class="button center" @route="user-info" @model={{@user}}>About user</LinkTo>
+    </div>
+</div>
+

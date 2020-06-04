@@ -1,0 +1,21 @@
+<div class="user-info-box">
+    <div class="large-icon">
+        <User::UserImage></User::UserImage>
+    </div>
+    <div class="user-description">
+        <p class="user-name">{{@user.name}}</p>
+        <p>Username: {{@user.username}}</p>
+        <p>Email: {{@user.email}}</p>
+        <p>Phone: {{@user.phone}}</p>
+        <p>City: {{@user.address.city}}</p>
+        <p>
+            <LinkTo class="button" @route="user-posts" @model={{@user}}>
+                Go to posts of {{@user.name}}
+            </LinkTo>
+        </p>
+    </div>
+
+
+
+
+</div>

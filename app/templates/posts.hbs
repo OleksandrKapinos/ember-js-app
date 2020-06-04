@@ -1,10 +1,8 @@
-<p>
-    this will be my posts
-</p>
+<LocalTitle>
+    List of posts
+</LocalTitle>
 <div class="posts">
-    <PostsTable>
         {{#each @model as |post|}}
-            <PostTableItem @post={{post}} />
+            <Post @post={{post}} />
         {{/each}}
-    </PostsTable>
 </div>
